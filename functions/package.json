@@ -1,0 +1,38 @@
+{
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase serve --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "dependencies": {
+    "firebase-admin": "~7.0.0",
+    "firebase-functions": "^2.3.0",
+    "jsonresume-theme-class": "^0.1.2",
+    "jsonresume-theme-classy": "^1.0.9",
+    "jsonresume-theme-elegant": "^1.12.1",
+    "jsonresume-theme-flat": "^0.3.7",
+    "jsonresume-theme-kendall": "^0.1.19",
+    "jsonresume-theme-kwan": "0.0.2",
+    "jsonresume-theme-modern": "0.0.18",
+    "jsonresume-theme-onepage": "0.0.3",
+    "jsonresume-theme-paper": "^0.3.5",
+    "jsonresume-theme-short": "^0.1.7",
+    "jsonresume-theme-slick": "^0.1.16",
+    "jsonresume-theme-spartan": "^0.2.1",
+    "jsonresume-theme-stackoverflow": "^1.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "firebase-functions-test": "^0.1.6"
+  },
+  "private": true
+}

@@ -1,0 +1,19 @@
+{
+  "name": "theme-functions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase-functions": "^3.0.2",
+    "jsonresume-theme-modern": "0.0.18",
+    "resume-schema": "0.0.16"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
