@@ -12,7 +12,7 @@ const getTheme = theme => {
   } catch (e) {
     return {
       error:
-        "Theme not supported please visit -> https://github.com/jsonresume/theme-manager/issues/48"
+        "Theme not supported please visit -> https://github.com/jsonresume/theme-functions/issues/12"
     };
   }
 };
@@ -25,13 +25,22 @@ app.get("/theme/:theme", (req, res) => {
   const resumeHTML = themeRenderer.render(resumeJson, {});
   res.send(resumeHTML);
 });
+
 app.post("/theme/:theme", (req, res) => {
+  console.log("Rendering theme");
   const resumeJson = req.body.resume;
+  var start = new Date();
   const themeRenderer = getTheme(req.params.theme);
+  var end = new Date() - start;
+  console.info("Execution time getTheme: %dms", end);
   if (themeRenderer.error) {
     return res.send(themeRenderer.error);
   }
+  start = new Date();
   const resumeHTML = themeRenderer.render(resumeJson, {});
+  end = new Date() - start;
+  console.info("Execution time render: %dms", end);
+  console.log("finished");
   res.send(resumeHTML);
 });
 // app.post("/", (req, res) => res.send(Widgets.create()));
